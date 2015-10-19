@@ -1,0 +1,44 @@
+export TERM=xterm-256color
+alias ls='ls --color=auto'
+export PATH="$HOME/bin:$HOME/usr/bin:$PATH:/sbin:/usr/sbin:/usr/local/sbin:$HOME/usr/texlive/bin/x86_64-linux:$HOME/.cabal/bin"
+
+export LESS_TERMCAP_mb=$'\E[01;31m'      # begin blinking
+export LESS_TERMCAP_md=$'\E[01;31m'      # begin bold
+export LESS_TERMCAP_me=$'\E[0m'          # end mode
+export LESS_TERMCAP_se=$'\E[0m'          # end standout-mode                 
+export LESS_TERMCAP_so=$'\E[01;44;33m'   # begin standout-mode - info box                              
+export LESS_TERMCAP_ue=$'\E[0m'          # end underline
+export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
+
+hash -d jd=/home/yen3/Downloads/JDownloader/downloads
+
+function command_not_found_handle() {
+  /usr/bin/python /usr/lib/command-not-found -- $1 
+}
+
+### HOST
+#
+# 163.25.101.85 soc02.cgu.edu.tw
+# 163.25.101.89 soc03.cgu.edu.tw
+# 163.25.101.88 soc04.cgu.edu.tw
+#
+# 163.25.101.87 soc.csie.cgu.edu.tw
+
+
+if [[ $HOST == "soc02.cgu.edu.tw" ]]
+then
+    source $HOME/Documents/rc/zshrc/zshrc_cad
+fi
+
+if [[ $HOST == "soc03.cgu.edu.tw" ]]
+then
+    source $HOME/Documents/rc/zshrc/zshrc_cad
+    hash -d reg_gen=/mnt/ssd/yen3/reg_gen
+fi
+
+if [[ $HOST == "soc04.cgu.edu.tw" ]]
+then
+    source $HOME/Documents/rc/zshrc/zshrc_cad
+    hash -d reg_gen=/home/yen3/code/reg_gen
+fi
+

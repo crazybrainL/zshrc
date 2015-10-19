@@ -1,0 +1,79 @@
+### global setting
+export CAD_INSTALL_PATH=/cad
+
+### License Server Setting
+export LM_LICENSE_SERVER_lscic3="140.126.24.16"
+export LM_LICENSE_SERVER_lsntu3="140.112.20.56"
+export LM_LICENSE_SERVER_lsncu3="140.115.71.53"
+export LM_LICENSE_SERVER_lsnctu3="140.113.202.153"
+export LM_LICENSE_SERVER_lsnchu3="140.120.90.45"
+export LM_LICENSE_SERVER_lsncku3="140.116.216.28"
+
+export LM_LICENSE_FILE=26585@$LM_LICENSE_SERVER_lsncu3:26585@$LM_LICENSE_SERVER_lsntu3:26585@$LM_LICENSE_SERVER_lsnctu3:26585@$LM_LICENSE_SERVER_lscic3
+
+### Altera EDA Tools Setting
+export PATH=$PATH:$CAD_INSTALL_PATH/altra9.0/quartus/bin
+
+### Synopsys EDA Tool Setting
+# icc
+export ICC_HOME=$CAD_INSTALL_PATH/synopsys/icc/cur
+export ICC_PATH=$ICC_HOME/bin:$ICC_HOME/linux/bin
+export ICC_PATH=$ICC_PATH:$ICC_HOME/linux/syn/bin
+export PATH=$PATH:$ICC_PATH
+
+
+# primepower
+export PRIMEPOWER_HOME=$CAD_INSTALL_PATH/synopsys/primepower/cur
+export PRIMEPOWER_PATH=$PRIMEPOWER_HOME/bin:$PRIMEPOWER_HOME/linux/bin
+export PRIMEPOWER_PATH=$PRIMEPOWER_PATH:$PRIMEPOWER_HOME/linux/syn/bin
+export PATH=$PATH:$PRIMEPOWER_PATH
+
+
+# primetime
+export PRIMETIME_HOME=$CAD_INSTALL_PATH/synopsys/primetime/cur
+export PRIMETIME_PATH=$PRIMETIME_HOME/bin:$PRIMETIME_HOME/linux/bin
+export PRIMETIME_PATH=$PRIMETIME_PATH:$PRIMETIME_HOME/linux/syn/bin
+export PATH=$PATH:$PRIMETIME_PATH
+
+# synthesis 
+export SYNTHESIS_HOME=$CAD_INSTALL_PATH/synopsys/synthesis/cur
+export SYNTHESIS_PATH=$SYNTHESIS_HOME/bin:$SYNTHESIS_HOME/linux/bin
+export SYNTHESIS_PATH=$SYNTHESIS_PATH:$SYNTHESIS_HOME/linux/syn/bin
+export PATH=$PATH:$SYNTHESIS_PATH
+
+# vcs 
+export VCS_HOME=$CAD_INSTALL_PATH/synopsys/vcs/cur
+export VCS_CC=gcc
+export VCS_PATH=$VCS_HOME/bin:$VCS_HOME/linux/bin:$VCS_HOME/linux/util
+export VCS_PATH=$VCS_PATH:$VCS_HOME/linux/util:$VCS_HOME/linux/flexlm
+export PATH=$PATH:$VCS_PATH
+
+# coreConsult
+export PATH=$PATH:$CAD_INSTALL_PATH/coreconsultant/cur/bin
+
+
+# UMC 90nm cell library and memory compiler setup
+export UMC90_LIB_HOME=$CAD_INSTALL_PATH/celllib/CBDK90_UMC_Faraday
+
+# directories for the cell library
+export UMC90_CELL_DB=$UMC90_LIB_HOME/CIC/SynopsysDC/db
+export UMC90_CELL_SDB=$UMC90_LIB_HOME/CIC/SynopsysDC/sdb
+export UMC90_SIM_DIR=$UMC90_LIB_HOME/CIC/Verilog
+
+# memory compiler setup
+export FTC=$UMC90_LIB_HOME/CIC/Memory/ftclib
+#export FTCLMD_LICENSE_FILE=99993@LM_LICENSE_SERVER_lscic3
+export FTCLMD_LICENSE_FILE=99993@$LM_LICENSE_SERVER_lsncu3:99993@$LM_LICENSE_SERVER_lsntu3:99993@$LM_LICENSE_SERVER_lsnctu3:99993@$LM_LICENSE_SERVER_lscic3
+
+# paths for the cell library and memory compiler
+export PATH=$PATH:$FTC/EXE
+
+
+# Unset Global setting
+unset CAD_INSTALL_PATH
+unset LM_LICENSE_SERVER_lscic3 
+unset LM_LICENSE_SERVER_lsntu3 
+unset LM_LICENSE_SERVER_lsncu3 
+unset LM_LICENSE_SERVER_lsnctu3
+unset LM_LICENSE_SERVER_lsnchu3
+unset LM_LICENSE_SERVER_lsncku3
