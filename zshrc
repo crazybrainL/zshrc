@@ -44,7 +44,7 @@ ZSH_THEME="whlin"
 plugins=(git osx)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.nvm/nvm.sh
+#source ~/.nvm/nvm.sh
 # Customize to your needs...
 
 
@@ -258,3 +258,5 @@ function pget()
 }
 
 export PATH=$HOME/.cabal/bin:$PATH
+export GOPATH=$HOME/go_work
+export GOBIN=$HOME/go_work/bin
