@@ -2,7 +2,6 @@
 #ZSH=/Users/whlin/Documents/rc/zshrc/oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
 
-# TEST ----------------------------
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
