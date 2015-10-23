@@ -260,5 +260,6 @@ function pget()
 }
 
 export PATH=$HOME/.cabal/bin:$PATH
-export GOPATH=$HOME/go_work
-export GOBIN=$HOME/go_work/bin
+export GOPATH=$HOME/.go_work
+export GOBIN=$HOME/.go_work/bin
+export RCPATH=$HOME/rc_files
