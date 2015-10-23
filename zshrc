@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 #ZSH=/Users/whlin/Documents/rc/zshrc/oh-my-zsh
-ZSH=~/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
