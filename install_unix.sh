@@ -2,6 +2,7 @@
 
 ## Link dictionay and files
 rm ~/.zshrc
+rm ./oh-my-zsh
 rm ~/.oh-my-zsh/themes/whlin.zsh-theme
 
 ln -s `pwd`/zshrc ~/.zshrc 
