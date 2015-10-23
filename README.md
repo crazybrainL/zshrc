@@ -16,17 +16,17 @@ $ chsh -s /bin/zsh
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
->在 document 底下, 創建 rc 資料夾
+在 document 底下, 創建 rc 資料夾
 
->```sh
->$ mkdir rc
->$ cd rc
->$ git clone https://github.com/whlin/zshrc.git
->```
+```sh
+$ mkdir rc
+$ cd rc
+$ git clone https://github.com/whlin/zshrc.git
+```
 
->進入 zshrc 資料夾, 執行 install_unix.sh
+進入 zshrc 資料夾, 執行 install_unix.sh
 
->```sh
->$ cd zshrc
->$ ./install_unix.sh
->```
+```sh
+$ cd zshrc
+$ ./install_unix.sh
+```
