@@ -1,6 +1,6 @@
 # whlin's zshrc setting
 
-## preface
+## Preface
 
 請先完成 rc 的環境設置 請參考 [rc]
 
@@ -43,3 +43,6 @@ $ mkdir rc_files
 $ cd ~/rc_files
 $ git clone https://github.com/whlin/zshrc.git
 ```
+
+
+[rc]: <https://github.com/whlin/rc>
