@@ -2,6 +2,7 @@
 
 ## Preface
 
+test
 請先完成 rc 的環境設置 請參考 [rc]
 
 ##  Installation
