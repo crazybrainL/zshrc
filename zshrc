@@ -53,13 +53,16 @@ source $ZSH/oh-my-zsh.sh
 UNAME=`uname`
 if [[ $UNAME == "Darwin" ]]
 then
-    source $HOME/Documents/rc/zshrc/zshrc_darwin 
+    #source $HOME/Documents/rc/zshrc/zshrc_darwin 
+    source $HOME/.zsh/zshrc_darwin 
 elif [[ $UNAME == "Linux" ]]
 then
-    source $HOME/Documents/rc/zshrc/zshrc_linux
+    #source $HOME/Documents/rc/zshrc/zshrc_linux
+    source $HOME/.zsh/zshrc_linux
 fi
 
 #source $HOME/Documents/rc/zshrc/func/incr*.zsh
+#source $HOME/.zsh/func/incr*.zsh
 
 export EDITOR=vim
 
@@ -83,7 +86,8 @@ hash -d code=~/Documents/code
 hash -d src=~/usr/src
 hash -d course=~/Documents/course
 hash -d rc=~/Documents/rc/
-hash -d zshrc=~/Documents/rc/zshrc
+#hash -d zshrc=~/Documents/rc/zshrc
+hash -d zsh=~/.zsh
 hash -d tmp=~/usr/tmp
 
 # path alias, e.g. cd ~XXX
@@ -230,6 +234,8 @@ precmd () {print -Pn "$PR_SET_CHARSET$PR_STITLE${(e)PR_TITLEBAR}"}
 #setopt prompt_subst
 #source $HOME/Documents/rc/zshrc/func/zgitinit 
 #source $HOME/Documents/rc/zshrc/func/prompt_wunjo_setup
+#source $HOME/.zsh/func/zgitinit 
+#source $HOME/.zsh/func/prompt_wunjo_setup
 
 
 # Key Binding
