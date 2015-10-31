@@ -87,7 +87,8 @@ hash -d src=~/usr/src
 hash -d course=~/Documents/course
 hash -d rc=~/Documents/rc/
 #hash -d zshrc=~/Documents/rc/zshrc
-hash -d zsh=~/.zsh
+hash -d zshrc=~/Document/zshrc
+hash -d vimfilers=~/Document/vimfilers
 hash -d tmp=~/usr/tmp
 
 # path alias, e.g. cd ~XXX
