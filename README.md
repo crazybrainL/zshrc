@@ -2,9 +2,14 @@
 
 ## Preface
 
-請先完成 rc 的環境設置 請參考 [rc]
+本設定包含了 rc, vimfilers, zshrc 等相關環境的設定
+請根據以下順序, 將相關的環境設定安裝:
+    
+ - [rc] 
+ - [zshrc]
+ - [vimfilers]
 
-##  Installation
+## Pre-install
 
 1. 安裝 zsh, nvm 
 
@@ -20,29 +25,19 @@ $ chsh -s /bin/zsh
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-3. 進入 ~/Document/rc , 將vimfilers git clone 進來
+## Installation
+
+習慣上, 我會在 ~/Document/ 資料夾中進行安裝,
+進入家目錄的 Document 資料夾, git clone the zshrc.git from github
+再進入 zshrc 資料夾中, 執行 ./install_unix.sh 來進行 zshrc 檔案的設定和安裝即可.
 
 ```sh
 $ cd ~/Document/rc
 $ git clone https://github.com/whlin/zshrc.git
-```
-
-4. 進入 zshrc 資料夾, 執行 install_unix.sh
-
-```sh
 $ cd zshrc
 $ ./install_unix.sh
 ```
 
-## local rc_files 目錄設置
-
-在家目錄, 創建 rc_files 資料夾, 並將 vimfilers 檔案 git clone 進去
-
-```sh
-$ mkdir rc_files
-$ cd ~/rc_files
-$ git clone https://github.com/whlin/zshrc.git
-```
-
-
 [rc]: <https://github.com/whlin/rc>
+[zshrc]: <https://github.com/whlin/zshrc>
+[vimfilers]: <https://github.com/whlin/vimfilers>
