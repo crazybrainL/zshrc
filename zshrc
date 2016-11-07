@@ -266,7 +266,12 @@ function pget()
     lftp -e "$cmd"
 }
 
-export PATH=$HOME/.cabal/bin:$PATH
-export GOPATH=$HOME/.go_work
-export GOBIN=$HOME/.go_work/bin
-export RCPATH=$HOME/rc_files
+# go-lang environment setting
+export PATH="/usr/local/go/bin:$PATH"
+export GOPATH="/usr/local/go/"
+
+# pyenv environment setting
+export PATH="/Users/whlin/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYTHON_CONFIGURE_OPTS="--enable-framework"
