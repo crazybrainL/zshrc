@@ -76,7 +76,6 @@ function gg(){
     git commit -a -v -m "$*"
 }
 
-
 alias '..'='cd ..'
 alias -g ...='../..'
 alias -g ....='../../..'
@@ -86,9 +85,8 @@ hash -d code=~/Documents/code
 hash -d src=~/usr/src
 hash -d course=~/Documents/course
 hash -d rc=~/Documents/rc/
-#hash -d zshrc=~/Documents/rc/zshrc
-hash -d zshrc=~/Document/zshrc
-hash -d vimfilers=~/Document/vimfilers
+hash -d zshrc=~/Documents/zshrc
+hash -d vimfilers=~/Documents/vimfilers
 hash -d tmp=~/usr/tmp
 
 # path alias, e.g. cd ~XXX
