@@ -11,18 +11,17 @@
 
 ## Pre-install
 
-1. 安裝 zsh, nvm 
+1. 安裝 zsh, zsh-completions 
 
 ```sh
 $ brew install zsh zsh-completions
-$ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-$ chsh -s /bin/zsh
+$ chsh -s chsh -s /usr/local/bin/zsh
 ```
 
 2. 安裝 oh-my-zsh
 
 ```sh
-$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+$ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ```
 
 ## Installation
