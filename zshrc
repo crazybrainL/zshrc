@@ -270,6 +270,8 @@ export GOPATH="/usr/local/go/"
 
 # pyenv environment setting
 export PATH="/Users/whlin/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# it will add /Users/whlin/.pyenv/shims to $PATH
+eval "$(pyenv init -)" 
+# it will add /Users/whlin/.pyenv/plugins/pyenv-virtualenv/shims to $PATH
+eval "$(pyenv virtualenv-init -)" 
 export PYTHON_CONFIGURE_OPTS="--enable-framework"
