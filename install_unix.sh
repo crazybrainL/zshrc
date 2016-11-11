@@ -1,15 +1,23 @@
 #!/usr/bin/env bash
 
 ## Link dictionay and files
-rm ~/.zsh
-rm ~/.zshrc
-rm ./oh-my-zsh
-rm ~/.oh-my-zsh/themes/whlin.zsh-theme
+PATHS=(`pwd` `pwd`/zshrc ~/.oh-my-zsh `pwd`/whlin.zsh-theme)
+LINKS=(~/.zsh ~/.zshrc `pwd`/oh-my-zsh ~/.oh-my-zsh/themes/whlin.zsh-theme)
 
-ln -s `pwd` ~/.zsh
-ln -s `pwd`/zshrc ~/.zshrc 
-ln -s ~/.oh-my-zsh `pwd`/oh-my-zsh
-ln -s `pwd`/whlin.zsh-theme `pwd`/oh-my-zsh/themes/whlin.zsh-theme
+tLen=${#PATHS[@]}
 
+for (( i=0; i<${tLen}; i++ ));
+do
+    if [[ -e ${LINKS[$i]} ]]; then
+        echo "rm ${LINKS[$i]}"
+        rm ${LINKS[$i]}
+    else
+        echo "${LINKS[$i]} doesn't exist"
+    fi
+done
 
-#cp ./whlin.zsh-theme ./oh-my-zsh/themes/
+for (( i=0; i<${tLen}; i++ ));
+do
+    echo "ln -s ${PATHS[$i]} ${LINKS[$i]}"
+    ln -s ${PATHS[$i]} ${LINKS[$i]}
+done
