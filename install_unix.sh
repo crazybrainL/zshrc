@@ -11,7 +11,7 @@ fi
 
 ## Link dictionay and files
 PATHS=($ZSHRCHOME $ZSHRCHOME/zshrc ~/.oh-my-zsh $ZSHRCHOME/whlin.zsh-theme)
-LINKS=(~/.zsh ~/.zshrc $ZSHRCHOME/oh-my-zsh ~/.oh-my-zsh/themes/whlin.zsh-theme)
+LINKS=($HOME/.zsh $HOME/.zshrc $ZSHRCHOME/oh-my-zsh $HOME/.oh-my-zsh/themes/whlin.zsh-theme)
 
 tLen=${#PATHS[@]}
 
