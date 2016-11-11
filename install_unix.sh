@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 
+ZSHRCHOME=~/Documents/zshrc
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+if [[ ! -e $ZSHRCHOME ]]; then
+    git clone https://github.com/whlin/zshrc $ZSHRCHOME
+fi
+
 ## Link dictionay and files
-PATHS=(`pwd` `pwd`/zshrc ~/.oh-my-zsh `pwd`/whlin.zsh-theme)
-LINKS=(~/.zsh ~/.zshrc `pwd`/oh-my-zsh ~/.oh-my-zsh/themes/whlin.zsh-theme)
+PATHS=($ZSHRCHOME $ZSHRCHOME/zshrc ~/.oh-my-zsh $ZSHRCHOME/whlin.zsh-theme)
+LINKS=(~/.zsh ~/.zshrc $ZSHRCHOME/oh-my-zsh ~/.oh-my-zsh/themes/whlin.zsh-theme)
 
 tLen=${#PATHS[@]}
 
