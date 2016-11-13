@@ -1,7 +1,41 @@
 #!/usr/bin/env bash
 
-ZSHRCHOME=~/Documents/zshrc
+## Link dictionay and files
+ZSHRCHOME=$HOME/Documents/zshrc
+CLEAN=false
+PATHS=($ZSHRCHOME $ZSHRCHOME/zshrc ~/.oh-my-zsh $ZSHRCHOME/whlin.zsh-theme)
+LINKS=($HOME/.zsh $HOME/.zshrc $ZSHRCHOME/oh-my-zsh $HOME/.oh-my-zsh/themes/whlin.zsh-theme)
 
+tLen=${#PATHS[@]}
+
+cleanRCFiles (){
+    for (( i=0; i<${tLen}; i++ ));
+    do
+        if [[ -e ${LINKS[$i]} ]]; then
+            echo "rm ${LINKS[$i]}"
+            rm ${LINKS[$i]}
+        else
+            echo "${LINKS[$i]} doesn't exist"
+        fi
+    done
+}
+
+buildRCFiles (){
+    for (( i=0; i<${tLen}; i++ ));
+    do
+        echo "ln -s ${PATHS[$i]} ${LINKS[$i]}"
+        ln -s ${PATHS[$i]} ${LINKS[$i]}
+    done
+}
+
+while getopts c: opt
+do
+    case $opt in
+        c) CLEAN=$OPTARG;;
+        \?) echo "Invalid option -$OPTARG" >&2;;
+    esac
+done
+    
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -9,24 +43,11 @@ if [[ ! -e $ZSHRCHOME ]]; then
     git clone https://github.com/whlin/zshrc $ZSHRCHOME
 fi
 
-## Link dictionay and files
-PATHS=($ZSHRCHOME $ZSHRCHOME/zshrc ~/.oh-my-zsh $ZSHRCHOME/whlin.zsh-theme)
-LINKS=($HOME/.zsh $HOME/.zshrc $ZSHRCHOME/oh-my-zsh $HOME/.oh-my-zsh/themes/whlin.zsh-theme)
+echo "----- CLEAN -----"
+cleanRCFiles
 
-tLen=${#PATHS[@]}
+if [[ "${CLEAN}" != true ]]; then
+    echo "----- BUILD -----"
+    buildRCFiles
+fi
 
-for (( i=0; i<${tLen}; i++ ));
-do
-    if [[ -e ${LINKS[$i]} ]]; then
-        echo "rm ${LINKS[$i]}"
-        rm ${LINKS[$i]}
-    else
-        echo "${LINKS[$i]} doesn't exist"
-    fi
-done
-
-for (( i=0; i<${tLen}; i++ ));
-do
-    echo "ln -s ${PATHS[$i]} ${LINKS[$i]}"
-    ln -s ${PATHS[$i]} ${LINKS[$i]}
-done
