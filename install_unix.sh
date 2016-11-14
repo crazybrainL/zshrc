@@ -38,7 +38,7 @@ done
     
 # Install oh-my-zsh
 #sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/robbyrussell/oh-my-zsh
+git clone --recursive https://github.com/robbyrussell/oh-my-zsh
 
 if [[ ! -e $ZSHRCHOME ]]; then
     git clone https://github.com/whlin/zshrc $ZSHRCHOME
