@@ -3,8 +3,8 @@
 ## Link dictionay and files
 ZSHRCHOME=$HOME/Documents/zshrc
 CLEAN=false
-PATHS=($ZSHRCHOME $ZSHRCHOME/zshrc $ZSHRCHOME/oh-my-zsh $ZSHRCHOME/whlin.zsh-theme)
-LINKS=($HOME/.zsh $HOME/.zshrc $HOME/.oh-my-zsh $HOME/.oh-my-zsh/themes/whlin.zsh-theme)
+PATHS=($ZSHRCHOME $HOME/.zshsetting/zshrc $HOME/.zshsetting/oh-my-zsh $HOME/.zshsetting/whlin.zsh-theme)
+LINKS=($HOME/.zshsetting $HOME/.zshrc $HOME/.oh-my-zsh $HOME/.oh-my-zsh/themes/whlin.zsh-theme)
 
 tLen=${#PATHS[@]}
 
