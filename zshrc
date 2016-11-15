@@ -54,11 +54,11 @@ UNAME=`uname`
 if [[ $UNAME == "Darwin" ]]
 then
     #source $HOME/Documents/rc/zshrc/zshrc_darwin 
-    source $HOME/.zsh/zshrc_darwin 
+    source $HOME/.zshsetting/zshrc_darwin 
 elif [[ $UNAME == "Linux" ]]
 then
     #source $HOME/Documents/rc/zshrc/zshrc_linux
-    source $HOME/.zsh/zshrc_linux
+    source $HOME/.zshsetting/zshrc_linux
 fi
 
 #source $HOME/Documents/rc/zshrc/func/incr*.zsh
