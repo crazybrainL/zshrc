@@ -266,7 +266,7 @@ function pget()
 
 # go-lang environment setting
 export PATH="/usr/local/go/bin:$PATH"
-export GOPATH="/usr/local/go/"
+export GOPATH="/usr/local/go"
 
 # pyenv environment setting
 export PATH="/Users/whlin/.pyenv/bin:$PATH"
