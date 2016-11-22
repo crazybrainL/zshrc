@@ -265,13 +265,23 @@ function pget()
 }
 
 # go-lang environment setting
-export PATH="/usr/local/go/bin:$PATH"
-export GOPATH="/usr/local/go"
+if [[ -d "/usr/local/go" ]]; then
+    #statements
+    export PATH="/usr/local/go/bin:$PATH"
+    export GOPATH="/usr/local/go"
+fi
 
 # pyenv environment setting
-export PATH="/Users/whlin/.pyenv/bin:$PATH"
-# it will add /Users/whlin/.pyenv/shims to $PATH
-eval "$(pyenv init -)" 
-# it will add /Users/whlin/.pyenv/plugins/pyenv-virtualenv/shims to $PATH
-eval "$(pyenv virtualenv-init -)" 
-export PYTHON_CONFIGURE_OPTS="--enable-framework"
+if [[ -d $HOME/.pyenv ]]; then
+    #statements
+    export PATH="$HOME/.pyenv/bin:$PATH"
+    # it will add $HOME/.pyenv/shims to $PATH
+    eval "$(pyenv init -)"
+    # it will add $HOME/.pyenv/plugins/pyenv-virtualenv/shims to $PATH
+    eval "$(pyenv virtualenv-init -)"
+    export PYTHON_CONFIGURE_OPTS="--enable-framework"
+fi
+
+if [[ -d $HOME/.fzf ]]; then
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
